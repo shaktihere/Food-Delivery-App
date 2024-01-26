@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/1999shakti/Igniting-Our-App/issues"
   },
-  "homepage": "https://github.com/1999shakti/Igniting-Our-App#readme",
-  "devDependencies": {
-    "parcel": "^2.11.0"
-  }
+  "homepage": "https://github.com/1999shakti/Igniting-Our-App#readme"
 }

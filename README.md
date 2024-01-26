@@ -1,1 +1,1 @@
-#Understanding pf npm usage and functioning
+#Understanding of npm usage and functioning
