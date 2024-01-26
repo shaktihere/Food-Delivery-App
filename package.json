@@ -1,0 +1,25 @@
+{
+  "name": "2-igniting-our-app",
+  "version": "1.0.0",
+  "description": "React App created by Shakti",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1999shakti/Igniting-Our-App.git"
+  },
+  "keywords": [
+    "shakti",
+    "react",
+    "react",
+    "app"
+  ],
+  "author": "Shakti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1999shakti/Igniting-Our-App/issues"
+  },
+  "homepage": "https://github.com/1999shakti/Igniting-Our-App#readme"
+}
