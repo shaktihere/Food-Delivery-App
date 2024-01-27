@@ -1,8 +1,6 @@
 import React from "react"; //used to get React from node modules inside react folder
 import ReactDOM from "react-dom/client";
 import foodlogo from "./food-app.png";
-import biryani from "./biryani.jpg";
-import KFC from "./kfc.jpg";
 
 /*
 Header -- 
