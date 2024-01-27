@@ -1,21 +1,9 @@
 # Welcome to the world of React
 
-# Parcel
+# Here we learned about JSX, Babel
 
-- Dev Build
-- Local Server
-- HMR = Hot Module Replacement = auto-refresh the page
-- Filw watching algorith - written in C++
-- Caching - faster builds
-- Image optimization
-- Minification of file
-- Bundling
-- Compress
-- Consistent Hashing - Consistent hashing is a distributed hashing technique used in computer science and distributed systems to achieve load balancing and minimize the need for rehashing when the number of nodes in a system changes. It is particularly useful in distributed hash tables (DHTs), distributed caching systems, and other distributed storage systems.
-- Code Splitting
-- Differential Bundling - support older browsers
-- Diagnostic - beautiful errors
-- Error handling - better error suggestion
-- HTTPs
-- Tree shaking - remove unused code
-- Different dev and production bundles
+JSX is not HTML or JS, it is syntax language which helps to develop React elements and have similar syntax as HTML. Babel does the compiler work and converts JSX into React element(JS object) so that JS engine understands it and the code works perfectly fine. JSX is very cool and have lot of amazing feature.
+
+# React Functional Component
+
+It is just a JS function which returns JSX.
