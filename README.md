@@ -1,9 +1,5 @@
 # Welcome to the world of React
 
-# Here we learned about JSX, Babel
+# Food App
 
-JSX is not HTML or JS, it is syntax language which helps to develop React elements and have similar syntax as HTML. Babel does the compiler work and converts JSX into React element(JS object) so that JS engine understands it and the code works perfectly fine. JSX is very cool and have lot of amazing feature.
-
-# React Functional Component
-
-It is just a JS function which returns JSX.
+Here we build our app, first we made a raw sketch about the app overall structure. There after using functional component we build each layer i.e. header, body, footer. In body we used props and mapping of array. We used real data from Swiggy official site for learning purpose that how real data works.

@@ -1,7 +1,7 @@
 {
-  "name": "2-igniting-our-app",
+  "name": "food-delivery-app",
   "version": "1.0.0",
-  "description": "React App created by Shakti",
+  "description": "Food delivery app",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
@@ -33,5 +33,6 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "main": "App.js"
 }
