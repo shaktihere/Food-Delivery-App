@@ -2,7 +2,6 @@
   "name": "2-igniting-our-app",
   "version": "1.0.0",
   "description": "React App created by Shakti",
-  "main": "App.js",
   "scripts": {
     "test": "jest"
   },
@@ -21,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/1999shakti/Igniting-Our-App/issues"
   },
-  "homepage": "https://github.com/1999shakti/Igniting-Our-App#readme"
+  "homepage": "https://github.com/1999shakti/Igniting-Our-App#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

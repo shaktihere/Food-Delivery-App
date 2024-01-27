@@ -1,3 +1,6 @@
+import React from "react"; //used to get React from node modules inside react folder
+import ReactDOM from "react-dom/client";
+
 const parent = React.createElement(
   "div",
   { id: "parent" },
