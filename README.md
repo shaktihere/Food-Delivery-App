@@ -26,5 +26,6 @@ Contact
 
 Normal JS functions - written by Meta developers written in React package. There are multiple hooks:-
 
--useState() - superpowerful state variables
--useEffect()
+-useState() - superpowerful state variables. Used to change UI based on code without any delay.
+-useEffect() - Called after rendering is done. Very interesting.
+Both should be created only inside component and at the top so that code don't get error in future.
