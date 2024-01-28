@@ -44,6 +44,27 @@
 }
 
 .filter-btn {
-  margin: 5px;
+  margin-top: 10px;
   cursor: pointer;
+  height: 30px;
+}
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  margin: 5px;
+  height: 400px;
+  width: 200px;
+  background-color: orange;
+}
+
+.login {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
 }
