@@ -1,12 +1,17 @@
-import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //State variable - superpowerfull variable
   const [restUList, setRestUList] = useState([]); //restUList - the which will be dynamically updated using hooks, setRestUList - the list which eill be used to modify restUList(helper)
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const onlineStatus = useOnlineStatus();
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -30,14 +35,16 @@ const Body = () => {
     return <Shimmer />; //Shimmer UI - fake UI till page is rendering
   }*/
 
+  if (onlineStatus === false) return <h1>Looks like you're offline</h1>;
+
   return restUList.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="flex">
+        <div className="search p-4 m-4">
           <input
-            className="search-box"
+            className="border border-solid border-black"
             type="text"
             value={searchText}
             onChange={(e) => {
@@ -45,6 +52,7 @@ const Body = () => {
             }}
           />
           <button
+            className="m-4 px-2 py-1 bg-green-200 rounded-lg"
             onClick={() => {
               //On-click filter the restaurant cards and update it in UI
               if (searchText.length === 0) {
@@ -62,23 +70,41 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filterList = restUList.filter(
-              (res) => res.info.sla.deliveryTime < 30
-            ); //Filter logic
-            setFilteredRestaurant(filterList); //Update the list, so that it reflects in UI
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div className="m-4 px-2 flex items-center">
+          <button
+            className="bg-green-400 px-4 py-2 rounded-md"
+            onClick={() => {
+              const filterList = restUList.filter(
+                (res) => res.info.avgRating > 4
+              ); //Filter logic
+              setFilteredRestaurant(filterList); //Update the list, so that it reflects in UI
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+          <div className="m-4 px-2 flex items-center">
+            <label className="text-bold">UserName: </label>
+            <input
+              className="p-2 border border-black ml-2"
+              value={loggedInUser}
+              onChange={(e) => setUserName(e.target.value)}
+            ></input>
+          </div>
+        </div>
       </div>
-      <div className="res-container">
-        {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resName={restaurant} />
+      <div className="flex flex-wrap">
+        {filteredRestaurant.map(
+          (restaurant) =>
+            restaurant.info.sla.deliveryTime < 30 ? (
+              <RestaurantCardPromoted
+                key={restaurant.info.id}
+                resName={restaurant}
+              />
+            ) : (
+              <RestaurantCard key={restaurant.info.id} resName={restaurant} />
+            )
           /**resName is used here, same mentioned above */
-        ))}
+        )}
       </div>
     </div>
   );
